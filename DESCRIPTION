@@ -1,0 +1,24 @@
+Package: brap
+Title: Structured Branching Process Simulation
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Nick",
+           family = "Golding",
+           role = c("aut", "cre"),
+           email = "nick.golding@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Simulation of renewal-equation structured-population branching process in R for modelling infectious disease outbreaks. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: 
+    tidyr,
+    dplyr,
+    tibble,
+    magrittr
