@@ -1,5 +1,5 @@
 ---
-title: "Structured Branching Processes"
+title: "brap: structured branching process simulation in R"
 output: github_document
 ---
 
@@ -11,8 +11,6 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-
-# structured branching process simulation in R
 
 This package contains methods to simulate a renewal-equation structured-population branching process in R for modelling infectious disease outbreaks. That is, a branching process where the population is structured into groups (e.g. age, workplace type, vaccination status), and where the process evolves over time in calendar days.
 

@@ -1,9 +1,7 @@
-Structured Branching Processes
+brap: structured branching process simulation in R
 ================
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# structured branching process simulation in R
 
 This package contains methods to simulate a renewal-equation
 structured-population branching process in R for modelling infectious
