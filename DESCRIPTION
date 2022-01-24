@@ -22,3 +22,5 @@ Imports:
     dplyr,
     tibble,
     magrittr
+URL: https://github.com/goldingn/brap
+BugReports: https://github.com/goldingn/brap/issues
