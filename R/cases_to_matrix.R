@@ -1,14 +1,10 @@
-#' Convert a linelist of cases (in the same format as produced by
-#' sim_cases()) into a date-by-group matrix of the number of new infections on
-#' that day in that group
-#'
-
-#' The case linelist must have columns: 'case_id' (an identifier, in any
-#' format); 'group', an integer giving the columns/row of the next generation
-#' matrix to which the case belongs; and 'infection_date' a Date object
-#' giving the date of infection of the case.
-#'
 #' @title Convert a Case Linelist Dataframe to a Matrix
+#' @description Convert a linelist of cases (in the same format as produced by
+#'   [sim_cases()] into a date-by-group matrix of the number of new infections
+#'   on that day in that group. The case linelist must have columns: 'case_id'
+#'   (an identifier, in any format); 'group', an integer giving the columns/row
+#'   of the next generation matrix to which the case belongs; and
+#'   'infection_date' a Date object giving the date of infection of the case.
 #' @param cases a case linelist dataframe with three columns as described below
 #' @param n_groups the total number of groups in the next generation matrix
 #' @return a matrix with rows giving dates (all dates between the minimum and

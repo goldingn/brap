@@ -31,17 +31,17 @@ contact_matrix <- matrix(
 )
 
 # convert to next-generation matrix, with the specified reproduction number
-ngm <- calibrate_ngm(contact_matrix, R = 2.5)
+ngm <- calibrate_ngm(ngm_unscaled = contact_matrix, R = 2.5)
 
 # simulate some cases and convert to matrix
-cases <- sim_cases(7, n_groups = n_groups)
-cases_matrix <- cases_to_matrix(cases, n_groups)
+cases <- sim_cases(n_cases = 7, n_groups = n_groups)
+cases_matrix <- cases_to_matrix(cases = cases, n_groups = n_groups)
 ```
 
 ```{r sim}
 # simulate multiple generations of cases
 case_counts <- project(ngm = ngm,
                        infections_matrix = cases_matrix,
-                       iterations = 10)
+                       n_days_project = 10)
 rowSums(case_counts)
 ```

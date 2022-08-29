@@ -17,13 +17,10 @@ sim_cases(n_cases, n_groups, max_days_ago = 14)
 a dataframe in the format described in details.
 }
 \description{
-Simulate a fake linelist of cases
-}
-\details{
-The case linelist must have columns: 'case_id' (an identifier, in any
-format); 'group', an integer giving the columns/row of the next generation
-matrix to which the case belongs; and 'infection_date' a Date object
-giving the date of infection of the case.
+The case linelist must have columns: 'case_id' (an identifier,
+in any format); 'group', an integer giving the columns/row of the next
+generation matrix to which the case belongs; and 'infection_date' a Date
+object giving the date of infection of the case.
 }
 \author{
 Nick Golding

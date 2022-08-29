@@ -15,8 +15,8 @@ calibrate_ngm(ngm_unscaled, R = 1)
 a calibrate next generation matrix
 }
 \description{
-Calibrate a next generation matrix (NGM) to have a specified reproduction
-number.
+Calibrate a next generation matrix (NGM) to have a specified
+reproduction number.
 }
 \author{
 Nick Golding

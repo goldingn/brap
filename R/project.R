@@ -1,18 +1,17 @@
-#' Simulate daily new infections in each group forward in time with the structured branching
-#' process model.
-#'
 #' @title Simulate Future Infections
+#' @description Simulate daily new infections in each group forward in time
+#'   with the structured branching process model.
 #' @param ngm a next generation matrix giving the average rate of new infection
 #'   between different population groups
 #' @param infections_matrix a day-by-group matrix of the number of initial new
 #'   infections per day to simulate form
-#' @param iterations the number of days to simulate beyond the end of
+#' @param n_days_project the number of days to simulate beyond the end of
 #'   infections_matrix
-#' @return a matrix of new infection sper day in each group undr a single
+#' @return a matrix of new infection sper day in each group under a single
 #'   simulation
 #' @author Nick Golding
 #' @export
-project <- function(ngm, infections_matrix, n_days_project = 10, ...) {
+project <- function(ngm, infections_matrix, n_days_project = 10) {
 
   n_groups <- ncol(infections_matrix)
 

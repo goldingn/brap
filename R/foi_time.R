@@ -1,8 +1,7 @@
-#' Calculate a matrix the force of infection (FOI) over time into each group,
-#' from a vector of the FOI into each group emanating from the new infections on
-#' a single day
-#'
 #' @title Calculate FOI Over Time
+#' @description Calculate a matrix the force of infection (FOI) over time into
+#'   each group, from a vector of the FOI into each group emanating from the
+#'   new infections on a single day.
 #' @param foi_groups a vector of the FOI into each group from a
 #'   single day
 #' @param day an index to n_Days giving the day from which the FOI emanates

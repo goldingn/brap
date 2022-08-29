@@ -1,7 +1,6 @@
-#' Calibrate a next generation matrix (NGM) to have a specified reproduction
-#' number.
-#'
 #' @title Calibrate a Next Generation Matrix
+#' @description Calibrate a next generation matrix (NGM) to have a specified
+#'   reproduction number.
 #' @param ngm_unscaled an unscaled next generation matrix
 #' @param R the target reproduction number of the next generation smatrix
 #' @return a calibrate next generation matrix
