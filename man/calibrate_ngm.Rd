@@ -9,7 +9,7 @@ calibrate_ngm(ngm_unscaled, R = 1)
 \arguments{
 \item{ngm_unscaled}{an unscaled next generation matrix}
 
-\item{R}{the target reproduction number of the next generation smatrix}
+\item{R}{the target reproduction number of the next generation matrix}
 }
 \value{
 a calibrate next generation matrix

@@ -16,7 +16,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    spelling
 VignetteBuilder: knitr
 Imports: 
     tidyr,
@@ -26,3 +27,4 @@ Imports:
     stats
 URL: https://github.com/goldingn/brap
 BugReports: https://github.com/goldingn/brap/issues
+Language: en-GB

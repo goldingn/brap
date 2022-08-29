@@ -17,7 +17,7 @@ infections per day to simulate form}
 infections_matrix}
 }
 \value{
-a matrix of new infection sper day in each group under a single
+a matrix of new infections per day in each group under a single
 simulation
 }
 \description{

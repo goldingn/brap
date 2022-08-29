@@ -7,7 +7,7 @@
 #'   infections per day to simulate form
 #' @param n_days_project the number of days to simulate beyond the end of
 #'   infections_matrix
-#' @return a matrix of new infection sper day in each group under a single
+#' @return a matrix of new infections per day in each group under a single
 #'   simulation
 #' @author Nick Golding
 #' @export
