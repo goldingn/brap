@@ -34,7 +34,6 @@ contact_matrix
 Next we'll convert the contact matrix to a next generation matrix, with a specified reproduction number of 2.5
 
 ```{r calibrate-bgm}
-# convert to next-generation matrix, with the specified reproduction number
 ngm <- calibrate_ngm(ngm_unscaled = contact_matrix, R = 2.5)
 ngm
 ```

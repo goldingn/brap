@@ -18,6 +18,21 @@ a calibrate next generation matrix
 Calibrate a next generation matrix (NGM) to have a specified
 reproduction number.
 }
+\examples{
+set.seed(2022-8-30)
+n_groups <- 10
+contact_matrix <- matrix(
+  runif(n_groups ^ 2, 5, 8),
+  n_groups,
+  n_groups
+  )
+contact_matrix
+
+ngm <- calibrate_ngm(ngm_unscaled = contact_matrix, R = 2.5)
+
+ngm
+
+}
 \author{
 Nick Golding
 }

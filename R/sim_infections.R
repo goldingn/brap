@@ -10,7 +10,7 @@
 #' @param k the dispersion parameter of a negative binomial distribution over
 #'   new infections
 #' @param ngm a next generation matrix with dimension n_groups
-#' @return
+#' @return matrix with the number of columns matching the number n_groups
 #' @author Nick Golding
 #' @noRd
 sim_infections <- function(infections_matrix, day, ngm, k = 0.1) {

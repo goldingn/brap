@@ -11,6 +11,19 @@
 #'   simulation
 #' @author Nick Golding
 #' @export
+#' @examples
+#' set.seed(2022-8-30)
+#' n_groups <- 10
+#' cases <- sim_cases(n_cases = 7, n_groups = n_groups)
+#' cases_matrix <- cases_to_matrix(cases = cases,
+#'                                 n_groups = n_groups)
+#' case_counts <- project(ngm = ngm,
+#'                        infections_matrix = cases_matrix,
+#'                        n_days_project = 10)
+#'
+#' case_counts
+#'
+#' rowSums(case_counts)
 project <- function(ngm, infections_matrix, n_days_project = 10) {
 
   n_groups <- ncol(infections_matrix)

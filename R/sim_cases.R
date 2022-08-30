@@ -11,6 +11,11 @@
 #' @return a dataframe in the format described in details.
 #' @author Nick Golding
 #' @export
+#' @examples
+#' set.seed(2022-8-30)
+#' n_groups <- 10
+#' cases <- sim_cases(n_cases = 7, n_groups = n_groups)
+#' cases
 sim_cases <- function(n_cases, n_groups, max_days_ago = 14) {
   tibble::tibble(
     case_id = seq_len(

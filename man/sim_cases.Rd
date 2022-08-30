@@ -22,6 +22,12 @@ in any format); 'group', an integer giving the columns/row of the next
 generation matrix to which the case belongs; and 'infection_date' a Date
 object giving the date of infection of the case.
 }
+\examples{
+set.seed(2022-8-30)
+n_groups <- 10
+cases <- sim_cases(n_cases = 7, n_groups = n_groups)
+cases
+}
 \author{
 Nick Golding
 }
