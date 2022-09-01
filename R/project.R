@@ -30,6 +30,16 @@ project <- function(ngm, infections_matrix, n_days_project = 10) {
 
   # set up new infections matrix with empty spaces
   new_days <- matrix(0, nrow = n_days_project, ncol = n_groups)
+
+  # add rownames of new dates to new days matrix
+  infections_matrix_dates <- as.Date(rownames(infections_matrix))
+  new_dates <- seq.Date(
+    from = max(infections_matrix_dates) + 1,
+    to =  max(infections_matrix_dates) + n_days_project,
+    by = 1
+  )
+  rownames(new_days) <- as.character(new_dates)
+
   infections_matrix <- rbind(infections_matrix, new_days)
   n_days <- nrow(infections_matrix)
 
