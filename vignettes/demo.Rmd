@@ -18,11 +18,9 @@ knitr::opts_chunk$set(
 library(brap)
 ```
 
-```{r fake_data}
+Let's create some simulated data. We'll start with a fake contact matrix with several groups:
 
-# simulation
-
-# make a fake contact matrix, with several groups
+```{r fake-data}
 n_groups <- 10
 contact_matrix <- matrix(
   runif(n_groups ^ 2, 5, 8),
@@ -30,18 +28,36 @@ contact_matrix <- matrix(
   n_groups
 )
 
-# convert to next-generation matrix, with the specified reproduction number
-ngm <- calibrate_ngm(contact_matrix, R = 2.5)
-
-# simulate some cases and convert to matrix
-cases <- sim_cases(7, n_groups = n_groups)
-cases_matrix <- cases_to_matrix(cases, n_groups)
+contact_matrix
 ```
 
+Next we'll convert the contact matrix to a next generation matrix, with a specified reproduction number of 2.5
+
+```{r calibrate-bgm}
+ngm <- calibrate_ngm(ngm_unscaled = contact_matrix, R = 2.5)
+ngm
+```
+
+Now let's simulate some cases and convert this to a matrix
+
+```{r cases-matrix}
+cases <- sim_cases(n_cases = 7, n_groups = n_groups)
+
+cases
+
+cases_matrix <- cases_to_matrix(cases = cases, n_groups = n_groups)
+
+cases_matrix
+```
+
+And now let's simulate multiple generations of cases
+
 ```{r sim}
-# simulate multiple generations of cases
 case_counts <- project(ngm = ngm,
                        infections_matrix = cases_matrix,
-                       iterations = 10)
+                       n_days_project = 10)
+
+case_counts
+
 rowSums(case_counts)
 ```

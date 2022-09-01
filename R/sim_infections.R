@@ -1,6 +1,8 @@
-#' Simulate new infections in days and groups, emanating from the new infections
-#' on people infected on a specific day.
 #' @title Simulate one timestep of new infections
+#'
+#' @description Simulate new infections in days and groups, emanating from the
+#'   new infections on people infected on a specific day.
+#'
 #' @param infections_matrix a date-by-group matrix of new infections collated so
 #'   far
 #' @param day the day (an integer index to the rows in 'infections_matrix') from
@@ -8,7 +10,7 @@
 #' @param k the dispersion parameter of a negative binomial distribution over
 #'   new infections
 #' @param ngm a next generation matrix with dimension n_groups
-#' @return
+#' @return matrix with the number of columns matching the number n_groups
 #' @author Nick Golding
 #' @noRd
 sim_infections <- function(infections_matrix, day, ngm, k = 0.1) {
@@ -31,7 +33,7 @@ sim_infections <- function(infections_matrix, day, ngm, k = 0.1) {
     foi_time(day, n_days)
 
   new_infections_matrix <- foi
-  new_infections_matrix[] <- rnbinom(
+  new_infections_matrix[] <- stats::rnbinom(
     n = length(new_infections_matrix),
     size = k * n_infections_today,
     mu = foi

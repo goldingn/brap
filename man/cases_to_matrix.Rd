@@ -18,14 +18,20 @@ order)
 }
 \description{
 Convert a linelist of cases (in the same format as produced by
-sim_cases()) into a date-by-group matrix of the number of new infections on
-that day in that group
+\code{\link[=sim_cases]{sim_cases()}} into a date-by-group matrix of the number of new infections
+on that day in that group. The case linelist must have columns: 'case_id'
+(an identifier, in any format); 'group', an integer giving the columns/row
+of the next generation matrix to which the case belongs; and
+'infection_date' a Date object giving the date of infection of the case.
 }
-\details{
-The case linelist must have columns: 'case_id' (an identifier, in any
-format); 'group', an integer giving the columns/row of the next generation
-matrix to which the case belongs; and 'infection_date' a Date object
-giving the date of infection of the case.
+\examples{
+set.seed(2022-8-30)
+n_groups <- 10
+cases <- sim_cases(n_cases = 7, n_groups = n_groups)
+cases
+cases_matrix <- cases_to_matrix(cases = cases,
+                                n_groups = n_groups)
+cases_matrix
 }
 \author{
 Nick Golding

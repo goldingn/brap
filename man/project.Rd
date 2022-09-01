@@ -4,7 +4,7 @@
 \alias{project}
 \title{Simulate Future Infections}
 \usage{
-project(ngm, infections_matrix, n_days_project = 10, ...)
+project(ngm, infections_matrix, n_days_project = 10)
 }
 \arguments{
 \item{ngm}{a next generation matrix giving the average rate of new infection
@@ -13,16 +13,30 @@ between different population groups}
 \item{infections_matrix}{a day-by-group matrix of the number of initial new
 infections per day to simulate form}
 
-\item{iterations}{the number of days to simulate beyond the end of
+\item{n_days_project}{the number of days to simulate beyond the end of
 infections_matrix}
 }
 \value{
-a matrix of new infection sper day in each group undr a single
+a matrix of new infections per day in each group under a single
 simulation
 }
 \description{
-Simulate daily new infections in each group forward in time with the structured branching
-process model.
+Simulate daily new infections in each group forward in time
+with the structured branching process model.
+}
+\examples{
+set.seed(2022-8-30)
+n_groups <- 10
+cases <- sim_cases(n_cases = 7, n_groups = n_groups)
+cases_matrix <- cases_to_matrix(cases = cases,
+                                n_groups = n_groups)
+case_counts <- project(ngm = ngm,
+                       infections_matrix = cases_matrix,
+                       n_days_project = 10)
+
+case_counts
+
+rowSums(case_counts)
 }
 \author{
 Nick Golding

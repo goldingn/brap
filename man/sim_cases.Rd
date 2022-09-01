@@ -11,19 +11,23 @@ sim_cases(n_cases, n_groups, max_days_ago = 14)
 
 \item{n_groups}{the number of population groups to which cases can belong}
 
-\item{max_days_ago}{the maximum number of days in the past to simulate cases}
+\item{max_days_ago}{the maximum number of days in the past to simulate cases.
+Default is 14 days.}
 }
 \value{
 a dataframe in the format described in details.
 }
 \description{
-Simulate a fake linelist of cases
+The case linelist must have columns: 'case_id' (an identifier,
+in any format); 'group', an integer giving the columns/row of the next
+generation matrix to which the case belongs; and 'infection_date' a Date
+object giving the date of infection of the case.
 }
-\details{
-The case linelist must have columns: 'case_id' (an identifier, in any
-format); 'group', an integer giving the columns/row of the next generation
-matrix to which the case belongs; and 'infection_date' a Date object
-giving the date of infection of the case.
+\examples{
+set.seed(2022-8-30)
+n_groups <- 10
+cases <- sim_cases(n_cases = 7, n_groups = n_groups)
+cases
 }
 \author{
 Nick Golding

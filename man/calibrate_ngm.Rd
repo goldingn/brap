@@ -9,14 +9,29 @@ calibrate_ngm(ngm_unscaled, R = 1)
 \arguments{
 \item{ngm_unscaled}{an unscaled next generation matrix}
 
-\item{R}{the target reproduction number of the next generation smatrix}
+\item{R}{the target reproduction number of the next generation matrix}
 }
 \value{
 a calibrate next generation matrix
 }
 \description{
-Calibrate a next generation matrix (NGM) to have a specified reproduction
-number.
+Calibrate a next generation matrix (NGM) to have a specified
+reproduction number.
+}
+\examples{
+set.seed(2022-8-30)
+n_groups <- 10
+contact_matrix <- matrix(
+  runif(n_groups ^ 2, 5, 8),
+  n_groups,
+  n_groups
+  )
+contact_matrix
+
+ngm <- calibrate_ngm(ngm_unscaled = contact_matrix, R = 2.5)
+
+ngm
+
 }
 \author{
 Nick Golding
