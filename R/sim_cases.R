@@ -7,7 +7,8 @@
 #'
 #' @param n_cases the number of cases to simulate
 #' @param n_groups the number of population groups to which cases can belong
-#' @param max_days_ago the maximum number of days in the past to simulate cases
+#' @param max_days_ago the maximum number of days in the past to simulate cases.
+#'   Default is 14 days.
 #' @return a dataframe in the format described in details.
 #' @author Nick Golding
 #' @export

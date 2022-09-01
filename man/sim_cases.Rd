@@ -11,7 +11,8 @@ sim_cases(n_cases, n_groups, max_days_ago = 14)
 
 \item{n_groups}{the number of population groups to which cases can belong}
 
-\item{max_days_ago}{the maximum number of days in the past to simulate cases}
+\item{max_days_ago}{the maximum number of days in the past to simulate cases.
+Default is 14 days.}
 }
 \value{
 a dataframe in the format described in details.
